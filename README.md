@@ -1,0 +1,1 @@
+# Solar-Panel-Fault-Detection-with-YOLOv11

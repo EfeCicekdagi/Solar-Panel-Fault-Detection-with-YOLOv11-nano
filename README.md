@@ -14,11 +14,12 @@ This repository contains code to **train** and **evaluate** a YOLOv11-nano model
 - Data  
   - images  
     - train  # training images  
-    - val    # validation images  
+    - val    # validation images
+    - test   # test images 
   - labels  
     - train  # YOLO-format labels for training  
-    - val    # YOLO-format labels for validation  
-  - test     # test images (optional)  
+    - val    # YOLO-format labels for validation
+    - test   # test images 
   - data.yaml
 - runs/               # training outputs (weights, logs, results)
 - train.py            # training script
@@ -41,7 +42,7 @@ The dataset contains **6 fault classes**:
 > Labels follow the YOLO format:  
 > `<class_id> <x_center> <y_center> <width> <height>` (normalized values).
 
-The dataset is split into **train (80%)** and **validation (20%)** sets.  
+The dataset is split into **train (80%)** , **validation (10%)** and **test (10%)** sets.  
 Make sure your dataset matches the expected folder structure before training.
 
 ---
@@ -77,10 +78,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ## 🔎 Inference / Testing
 
-After training, you can run inference on **your own test images**:
-
-> **Note:** Please prepare and place your own test images in the `data/test` directory  
-> (This project does not include test images due to dataset license and size).
+After training, you can run inference on **test images**:
 
 ---
 
@@ -101,7 +99,7 @@ After training, you can run inference on **your own test images**:
 ## 📜 License & Credit
 
 - **Code:** Licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.  
-- **Dataset:** [Kaggle — Solar Panels Dirt Detection](https://www.kaggle.com/datasets/malkamahira/solar-panels-dirt-detection) — **Unknown License**  
+- **Dataset:** [Kaggle — Solar Panels Dirt Detection](https://www.kaggle.com/datasets/pythonafroz/solar-panel-images) — **Unknown License**  
   > No explicit license information provided on the dataset page at the time of download.  
   > Please check the dataset’s Kaggle page for any updates or restrictions before public/commercial use.
 

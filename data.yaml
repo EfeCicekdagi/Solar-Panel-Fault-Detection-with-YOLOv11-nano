@@ -1,7 +1,8 @@
-path: C:/Users/hp/Desktop/AI/Solar Panel Project/Task4_EfeÇiçekdağı/Data
+path: Write the file extension of DATA folder
 train: images/train
 val: images/val
 test: images/test
 
 nc: 6
+
 names: ['Clean', 'Dust','Bird','Electrical','Physical','Snow']

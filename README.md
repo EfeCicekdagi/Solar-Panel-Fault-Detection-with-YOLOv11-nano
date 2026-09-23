@@ -19,7 +19,7 @@ This repository contains code to **train** and **evaluate** a YOLOv11-nano model
   - labels  
     - train  # YOLO-format labels for training  
     - val    # YOLO-format labels for validation
-    - test   # test images 
+    - test   # YOLO-format labels for testing 
   - data.yaml
 - runs/               # training outputs (weights, logs, results)
 - train.py            # training script
@@ -78,7 +78,16 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ## 🔎 Inference / Testing
 
-After training, you can run inference on **test images**:
+After training, you can run inference on **test images** using the CLI:
+
+```bash
+yolo predict model=runs/detect/train/weights/best.pt source=Data/images/test
+```
+
+Or by using the evaluation script:
+```bash
+python test.py
+```
 
 ---
 

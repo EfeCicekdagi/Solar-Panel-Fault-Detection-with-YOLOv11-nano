@@ -1,10 +1,7 @@
 import os
 import re
-from ultralytics import YOLO
 import shutil
-from ultralytics.utils import SETTINGS
-from pathlib import Path
-
+from ultralytics import YOLO
 """  
 # Klasör yolları
 image_folder = r"Data/images/val"
@@ -38,7 +35,7 @@ for fname in os.listdir(image_folder):
 def main():
     model = YOLO("yolo11n.pt")
     # data.yaml dosyasının bilgisayarınızdaki tam yolunu buraya yazın
-    results = model.train(data="Write the file extension of data.yaml", epochs=100, imgsz=640)
+    results = model.train(data="data.yaml", epochs=100, imgsz=640)
 
 if __name__ == "__main__":
     from multiprocessing import freeze_support

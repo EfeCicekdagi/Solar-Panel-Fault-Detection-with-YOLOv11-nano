@@ -3,12 +3,11 @@ from ultralytics import YOLO
 def main():
     model = YOLO("runs/detect/train/weights/best.pt")
     metrics = model.val(
-        data="Write the file extension of .yaml",
+        data="data.yaml",
         split="test",
         imgsz=640,
         batch=16,
-        workers=2,   
-        device=0
+        workers=2
     )
     print(metrics)
 

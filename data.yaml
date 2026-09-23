@@ -1,4 +1,4 @@
-path: Write the file extension of DATA folder
+path: Data # Enter the absolute or relative path to your Data folder here
 train: images/train
 val: images/val
 test: images/test
